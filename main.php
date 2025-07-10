@@ -10,12 +10,11 @@ $questions = [
     "VI -La planete Terre est-elle ?\n1.Plate\n2.En forme de triange.\n3.Ronde"
 ];
 
-$save = fopen("save.txt", "a+");
 $reponses = [1, 2, 3, 1, 3, 3];
 $score = 0;
 $nb_questions = count($questions);
 $scoreMax = $nb_questions * 10;
-$lastScore = file("save.txt", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+$save = fopen("save.txt", "a+");
 
 
 if (filesize("save.txt") === 0) {
@@ -65,3 +64,6 @@ if ($scorePercent >= 50) {
 
 fwrite($save, "Score : $score pts\n");
 fclose($save);
+
+
+?>

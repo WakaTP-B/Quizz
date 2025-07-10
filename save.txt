@@ -1,2 +1,3 @@
-Score : 50 pts
 Score : 20 pts
+Score : 60 pts
+Score : 40 pts
